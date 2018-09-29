@@ -43,12 +43,14 @@ public class Person : AugmentaPersonBehaviour
     void Start()
     {
         fleche = Instantiate(flechePrefab).GetComponentInChildren<Glow>();
+        fleche.LinkedPerson = this;
         fleche.transform.parent.parent = transform;
         points = new Glow[numPoints];
         for (int i = 0; i < numPoints; i++)
         {
             points[i] = Instantiate(pointPrefab).GetComponent<Glow>();
             points[i].transform.parent = transform;
+            points[i].LinkedPerson = this;
         }
 
         splineIndex = getClosestSplineIndex();
@@ -91,6 +93,7 @@ public class Person : AugmentaPersonBehaviour
             OSCMaster.sendMessage(msg2, PathManager.instance.OutputIP, PathManager.instance.OutputPort);
 
             IsOnMeetingPoint = true;
+            
 
             StartCoroutine(CallMethodAfterXSeconds(MeetingDuration, NextStep));
         }

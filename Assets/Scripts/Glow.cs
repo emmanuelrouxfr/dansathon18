@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Glow : MonoBehaviour {
 
+    public Person LinkedPerson;
+
     public float delay;
     public float cycle;
     [Range(0,1)]
@@ -18,6 +20,17 @@ public class Glow : MonoBehaviour {
 	void Update () {
         float cycleTime = (Time.time + delay) % cycle;
 
-        GetComponent<Renderer>().enabled = cycleTime < (onTime * cycle);
-	}
+        if (!LinkedPerson.IsOnMeetingPoint)
+        {
+            GetComponent<Renderer>().enabled = cycleTime < (onTime * cycle);
+        }
+        else
+        {
+            GetComponent<Renderer>().enabled = false;
+        }
+
+    }
+
+
+
 }
