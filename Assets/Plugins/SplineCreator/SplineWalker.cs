@@ -46,9 +46,17 @@ public class SplineWalker : MonoBehaviour {
         if (LinkedAugmentaPoint == null || !Started)
             return;
 
-        OSCMessage msg = new OSCMessage("/splineViewer/" + LinkedAugmentaPoint.GetComponent<AugmentaPersonBehaviour>().pid, progress);
-        OSCMaster.sendMessage(msg, TargetIP, TargetPort);
-
+        AugmentaPersonBehaviour apb = LinkedAugmentaPoint.GetComponent<AugmentaPersonBehaviour>();
+        if (apb != null)
+        {
+            OSCMessage msg = new OSCMessage("/splineViewer/" + apb.pid, progress);
+            OSCMaster.sendMessage(msg, TargetIP, TargetPort);
+        }
+        else
+        {
+            Debug.LogWarning("AugmentaPersonBehaviour should not be null");
+        }
+       
         if ((LinkedAugmentaPoint.position - transform.position).magnitude < DistanceToAugmentaPoint)
             progress += DistanceToAugmentaPoint - (LinkedAugmentaPoint.position - transform.position).magnitude;
 

@@ -10,9 +10,9 @@ public class AdvertPathManager : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if(isLeft)
-            MyPathManager.StartLeftPath(other.gameObject);
-        else
-            MyPathManager.StartRightPath(other.gameObject);
+            //if(isLeft)
+            //    MyPathManager.StartLeftPath(other.gameObject);
+            //else
+            //    MyPathManager.StartRightPath(other.gameObject);
     }
 }
