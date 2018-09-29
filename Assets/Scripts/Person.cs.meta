@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2345ee9a28aba124c9abe9a0e80a0936
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - flechePrefab: {fileID: 1492918622057738, guid: 65324bb8b3832994bad79f2a551432ed,
+      type: 2}
+  - pointPrefab: {fileID: 1340470340353782, guid: d4b45f6ee1983054286a1d931c17d599,
+      type: 2}
+  - fleche: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

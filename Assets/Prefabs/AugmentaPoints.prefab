@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 65780383943931946}
   - component: {fileID: 54818219895260188}
   - component: {fileID: 114551868537399054}
+  - component: {fileID: 114223425592737508}
   m_Layer: 0
   m_Name: AugmentaPoints
   m_TagString: Untagged
@@ -113,6 +114,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114223425592737508
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1229355447231012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2345ee9a28aba124c9abe9a0e80a0936, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flechePrefab: {fileID: 1492918622057738, guid: 65324bb8b3832994bad79f2a551432ed,
+    type: 2}
+  pointPrefab: {fileID: 1340470340353782, guid: d4b45f6ee1983054286a1d931c17d599,
+    type: 2}
+  fleche: {fileID: 0}
+  points: []
+  numPoints: 5
+  cycleTime: 1
+  onTime: 0.109
 --- !u!114 &114551868537399054
 MonoBehaviour:
   m_ObjectHideFlags: 1
